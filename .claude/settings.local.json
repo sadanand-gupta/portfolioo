@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create vite@latest . -- --template vue)",
+      "Bash(npm install)",
+      "Bash(npm run dev)",
+      "Bash(where pandoc)",
+      "Bash(where wkhtmltopdf)",
+      "Bash(npx --yes puppeteer --version)",
+      "Bash(npm install puppeteer)",
+      "Bash(node generate-resume.js)",
+      "Bash(node generate-resume.cjs)"
+    ]
+  }
+}
