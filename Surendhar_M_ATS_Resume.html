@@ -5,169 +5,414 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Surendhar M - Graphic & Motion Graphic Designer Resume</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap');
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-      font-size: 10.5pt;
-      line-height: 1.4;
-      color: #222;
-      max-width: 780px;
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      font-size: 10pt;
+      line-height: 1.5;
+      color: #2d2d2d;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 32px 44px;
+      padding: 0;
       background: #fff;
     }
-    h1 { font-size: 20pt; font-weight: 700; color: #111; margin-bottom: 2px; }
+
+    /* ── Header Block ── */
+    .header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 32px 44px 28px;
+      position: relative;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 44px;
+      right: 44px;
+      height: 3px;
+      background: linear-gradient(90deg, #c8a86e, #e8d5a8, #c8a86e);
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', 'Georgia', serif;
+      font-size: 26pt;
+      font-weight: 400;
+      color: #fff;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    h1 span {
+      color: #c8a86e;
+    }
+
+    .subtitle {
+      font-size: 9.5pt;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #b0b0c8;
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      font-size: 9pt;
+      color: #d0d0e0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 0;
+    }
+
+    .contact a {
+      color: #c8a86e;
+      text-decoration: none;
+    }
+
+    .contact .sep {
+      color: #555;
+      margin: 0 10px;
+    }
+
+    /* ── Main Content ── */
+    .content {
+      padding: 20px 44px 32px;
+    }
+
+    /* ── Section Headers ── */
     h2 {
-      font-size: 10.5pt;
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5pt;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #111;
-      border-bottom: 1.5px solid #333;
-      padding-bottom: 3px;
-      margin-top: 14px;
-      margin-bottom: 8px;
+      letter-spacing: 0;
+      color: #1a1a2e;
+      margin-top: 18px;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+      border-bottom: 2px solid #c8a86e;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    h3 { font-size: 10.5pt; font-weight: 700; color: #111; margin-bottom: 1px; }
-    .subtitle { font-size: 10.5pt; color: #444; font-weight: 400; margin-bottom: 4px; }
-    .contact { font-size: 9.5pt; color: #333; margin-bottom: 2px; }
-    .contact a { color: #333; text-decoration: none; }
-    .summary { font-size: 10pt; margin-bottom: 4px; line-height: 1.45; }
-    .job { margin-bottom: 10px; }
-    .job-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
-    .job-date { font-size: 9.5pt; color: #555; white-space: nowrap; }
-    .job-role { font-style: italic; color: #444; font-size: 10pt; margin-bottom: 4px; }
-    ul { padding-left: 18px; margin-bottom: 4px; }
-    li { margin-bottom: 2px; font-size: 10pt; line-height: 1.4; }
-    .skill-cat { margin-bottom: 4px; font-size: 10pt; }
-    .skill-cat strong { font-size: 10pt; }
-    .skill-cat span { font-size: 10pt; color: #333; }
-    .edu-row { display: flex; justify-content: space-between; margin-bottom: 3px; }
-    .edu-row h3 { font-size: 10pt; }
-    .edu-detail { font-size: 9.5pt; color: #444; font-style: italic; margin-bottom: 6px; }
-    .ats-section { display: none; }
+
+    h2 .accent-dot {
+      width: 6px;
+      height: 6px;
+      background: #c8a86e;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    /* ── Summary ── */
+    .summary {
+      font-size: 9.5pt;
+      line-height: 1.6;
+      color: #3a3a3a;
+      margin-bottom: 4px;
+      padding: 10px 14px;
+      background: #f8f7f4;
+      border-left: 3px solid #c8a86e;
+    }
+
+    .summary strong {
+      color: #1a1a2e;
+    }
+
+    /* ── Skills Grid ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .skill-cat {
+      font-size: 9.5pt;
+      line-height: 1.5;
+      padding: 6px 10px;
+      background: #fafaf8;
+      border: 1px solid #eeece6;
+    }
+
+    .skill-cat strong {
+      font-size: 9pt;
+      font-weight: 700;
+      color: #1a1a2e;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .skill-cat span {
+      font-size: 9pt;
+      color: #444;
+    }
+
+    /* ── Job Blocks ── */
+    .job {
+      margin-bottom: 12px;
+      padding-left: 12px;
+      border-left: 2px solid #e8e4dc;
+      position: relative;
+    }
+
+    .job::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      background: #c8a86e;
+      border-radius: 50%;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    h3 {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 1px;
+    }
+
+    .job-date {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #888;
+      white-space: nowrap;
+      letter-spacing: 0.5px;
+    }
+
+    .job-role {
+      font-style: italic;
+      color: #666;
+      font-size: 9pt;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      padding-left: 16px;
+      margin-bottom: 4px;
+    }
+
+    li {
+      margin-bottom: 3px;
+      font-size: 9.5pt;
+      line-height: 1.45;
+      color: #333;
+    }
+
+    li strong {
+      color: #1a1a2e;
+    }
+
+    li::marker {
+      color: #c8a86e;
+    }
+
+    /* ── Education ── */
+    .edu-item {
+      margin-bottom: 8px;
+      padding-left: 12px;
+      border-left: 2px solid #e8e4dc;
+      position: relative;
+    }
+
+    .edu-item::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 4px;
+      width: 8px;
+      height: 8px;
+      background: #c8a86e;
+      border-radius: 50%;
+    }
+
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-row h3 {
+      font-size: 10pt;
+    }
+
+    .edu-detail {
+      font-size: 9pt;
+      color: #666;
+      font-style: italic;
+      margin-top: 1px;
+    }
+
+    /* ── Print Styles ── */
     @media print {
-      body { padding: 20px 32px; }
-      .ats-section { display: none; }
+      body { padding: 0; }
+      .header { padding: 24px 36px 22px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .header::after { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .content { padding: 16px 36px 24px; }
+      .summary { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .skill-cat { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .job::before, .edu-item::before { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      h2 { border-bottom-color: #c8a86e; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     }
   </style>
 </head>
 <body>
 
-  <h1>SURENDHAR M</h1>
-  <div class="subtitle">Senior Graphic Designer | Motion Graphic Designer | Visual Effects Artist</div>
-  <div class="contact">
-    +91 9360998466 &nbsp;|&nbsp;
-    <a href="mailto:worldofsuren@gmail.com">worldofsuren@gmail.com</a> &nbsp;|&nbsp;
-    <a href="https://www.linkedin.com/in/surendhar-m-1a1397203/">LinkedIn</a> &nbsp;|&nbsp;
-    <a href="https://www.behance.net/Lsm_Cuts">Behance</a> &nbsp;|&nbsp;
-    <a href="https://www.instagram.com/world_of_suren/">Instagram</a>
-  </div>
-
-  <h2>Professional Summary</h2>
-  <p class="summary">
-    Results-driven <strong>Graphic &amp; Motion Graphic Designer</strong> with <strong>5+ years</strong> delivering high-impact visual content across brand identity, digital marketing, and motion graphics for <strong>6+ brands</strong>. Increased social media engagement by up to <strong>40%</strong> through visual storytelling and AI-powered workflows. Proficient in <strong>20+ tools</strong> including Adobe Creative Suite, After Effects, Blender, Nuke, and Figma.
-  </p>
-
-  <h2>Core Skills</h2>
-  <div class="skill-cat">
-    <strong>Graphic Design:</strong>
-    <span>Adobe Photoshop, Illustrator, InDesign, Figma, Brand Identity, Typography, Layout, Print &amp; Packaging Design</span>
-  </div>
-  <div class="skill-cat">
-    <strong>Motion &amp; Video:</strong>
-    <span>After Effects, Premiere Pro, Audition, Motion Graphics, Video Editing, Animation, Visual Storytelling</span>
-  </div>
-  <div class="skill-cat">
-    <strong>VFX &amp; 3D:</strong>
-    <span>Nuke, Houdini, Mocha Pro, SilhouetteFX, 3DEqualizer, Maya, Blender, Substance 3D Painter, Compositing</span>
-  </div>
-  <div class="skill-cat">
-    <strong>Digital &amp; AI:</strong>
-    <span>Social Media Design, Campaign Design, AI-Powered Design, Generative AI, Content Optimization, Digital Advertising</span>
-  </div>
-
-  <h2>Professional Experience</h2>
-
-  <div class="job">
-    <div class="job-header">
-      <h3>WEBDOUX PVT. LTD. &mdash; Senior Graphic Designer</h3>
-      <div class="job-date">May 2025 &ndash; Present</div>
+  <!-- ── HEADER ── -->
+  <div class="header">
+    <h1>SURENDHAR <span>M</span></h1>
+    <div class="subtitle">Senior Graphic Designer | Motion Graphic Designer | Visual Effects Artist</div>
+    <div class="contact">
+      +91 9360998466
+      <span class="sep">|</span>
+      <a href="mailto:worldofsuren@gmail.com">worldofsuren@gmail.com</a>
+      <span class="sep">|</span>
+      <a href="https://www.linkedin.com/in/surendhar-m-1a1397203/">LinkedIn</a>
+      <span class="sep">|</span>
+      <a href="https://www.behance.net/Lsm_Cuts">Behance</a>
+      <span class="sep">|</span>
+      <a href="https://www.instagram.com/world_of_suren/">Instagram</a>
     </div>
-    <ul>
-      <li>Lead creative development of digital visuals and video content, integrating AI-powered workflows that reduced production time by <strong>35%</strong>.</li>
-      <li>Deliver <strong>50+ brand visuals and motion graphics monthly</strong>, increasing content output efficiency by <strong>40%</strong>.</li>
-      <li>Generate professional-grade videos with visual storytelling and smart automation, achieving <strong>25% higher engagement</strong>.</li>
-      <li>Pioneer adoption of generative AI tools, establishing best practices for automated video editing and content optimization.</li>
-    </ul>
   </div>
 
-  <div class="job">
-    <div class="job-header">
-      <h3>AUSTRALIAN FOOD INDIA PVT. LTD. &mdash; Executive Designer</h3>
-      <div class="job-date">Sep 2021 &ndash; Apr 2024</div>
+  <!-- ── CONTENT ── -->
+  <div class="content">
+
+    <h2><span class="accent-dot"></span> Professional Summary</h2>
+    <p class="summary">
+      Results-driven <strong>Graphic &amp; Motion Graphic Designer</strong> with <strong>5+ years</strong> of creative direction and visual storytelling across brand identity, digital campaigns, and motion graphics for <strong>6+ brands</strong>. Increased social media engagement by up to <strong>40%</strong> through AI-driven workflows, content strategy, and platform-specific optimization. Proficient in <strong>20+ tools</strong> including Adobe Creative Suite, After Effects, Blender, Nuke, and Figma. Skilled in brand positioning, campaign planning, and cross-functional collaboration with marketing teams.
+    </p>
+
+    <h2><span class="accent-dot"></span> Core Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-cat">
+        <strong>Graphic Design</strong>
+        <span>Adobe Photoshop, Illustrator, InDesign, Figma, Brand Identity, Typography, Layout, Print &amp; Packaging Design</span>
+      </div>
+      <div class="skill-cat">
+        <strong>Motion &amp; Video</strong>
+        <span>After Effects, Premiere Pro, Audition, Motion Graphics, Video Editing, Animation, Visual Storytelling</span>
+      </div>
+      <div class="skill-cat">
+        <strong>VFX &amp; 3D</strong>
+        <span>Nuke, Houdini, Mocha Pro, SilhouetteFX, 3DEqualizer, Maya, Blender, Substance 3D Painter, Compositing</span>
+      </div>
+      <div class="skill-cat">
+        <strong>Digital &amp; AI</strong>
+        <span>Content Strategy, Creative Direction, Campaign Design, AI-Powered Design, Generative AI, Digital Advertising, Brand Positioning</span>
+      </div>
     </div>
-    <div class="job-role">Full-Time (Sep 2021 &ndash; Nov 2022) &rarr; Part-Time (Dec 2022 &ndash; Apr 2024)</div>
-    <ul>
-      <li>Designed <strong>100+ marketing materials</strong> (posters, flyers, signage, packaging) with <strong>100% brand guideline compliance</strong>.</li>
-      <li>Led <strong>15+ design projects</strong> for digital and print campaigns, reducing revision cycles by <strong>20%</strong>.</li>
-      <li>Created motion graphics and social media content for Instagram &amp; Facebook, growing followers by <strong>20%</strong> and boosting post engagement by <strong>35%</strong>.</li>
-      <li>Executed creative content for seasonal promotions, contributing to <strong>30% increase in campaign engagement</strong>.</li>
-    </ul>
-  </div>
 
-  <h2>Key Projects</h2>
+    <h2><span class="accent-dot"></span> Professional Experience</h2>
 
-  <div class="job">
-    <div class="job-header">
-      <h3>CHOCOLATEX &mdash; Motion Graphics Designer &amp; Video Editor</h3>
-      <div class="job-date">Dec 2024 &ndash; Apr 2025</div>
+    <div class="job">
+      <div class="job-header">
+        <h3>WEBDOUX PVT. LTD. &mdash; Senior Graphic Designer</h3>
+        <div class="job-date">May 2025 &ndash; Present</div>
+      </div>
+      <ul>
+        <li>Lead creative direction of digital visuals and video content, integrating AI-powered workflows that reduced production time by <strong>35%</strong>.</li>
+        <li>Deliver <strong>50+ brand visuals and motion graphics monthly</strong>, increasing content output efficiency by <strong>40%</strong> while maintaining brand consistency.</li>
+        <li>Generate professional-grade videos combining visual storytelling, motion effects, and smart automation, achieving <strong>25% higher engagement</strong>.</li>
+        <li>Collaborate with marketing and creative teams to craft visually compelling digital campaigns aligned with client objectives and brand positioning.</li>
+        <li>Ensure platform-specific optimization, adapting AI-generated content for social media, advertising, and digital marketing to maximize reach.</li>
+      </ul>
     </div>
-    <ul>
-      <li>Created <strong>20+ motion graphics and video assets</strong> for digital platforms, integrating AI tools to improve production efficiency by <strong>30%</strong>.</li>
-      <li>Achieved <strong>45% increase in digital engagement</strong> through visual effects and brand storytelling.</li>
-    </ul>
-  </div>
 
-  <div class="job">
-    <div class="job-header">
-      <h3>OUT BOX CREATIONS &mdash; Multi-Brand Creative Campaign</h3>
-      <div class="job-date">Apr &ndash; Dec 2024</div>
+    <div class="job">
+      <div class="job-header">
+        <h3>AUSTRALIAN FOOD INDIA PVT. LTD. &mdash; Executive Designer</h3>
+        <div class="job-date">Sep 2021 &ndash; Apr 2024</div>
+      </div>
+      <div class="job-role">Full-Time (Sep 2021 &ndash; Nov 2022) &rarr; Part-Time (Dec 2022 &ndash; Apr 2024)</div>
+      <ul>
+        <li>Designed <strong>100+ marketing materials</strong> (posters, flyers, signage, packaging) with <strong>100% brand guideline compliance</strong>, strengthening brand positioning across all touchpoints.</li>
+        <li>Led <strong>15+ design projects</strong> for digital and print campaigns, collaborating with marketing teams to reduce revision cycles by <strong>20%</strong>.</li>
+        <li>Created motion graphics and social media content for Instagram &amp; Facebook, growing followers by <strong>20%</strong> and boosting post engagement by <strong>35%</strong>.</li>
+        <li>Planned and executed content strategy for seasonal promotions and product launches, contributing to <strong>30% increase in campaign engagement</strong>.</li>
+        <li>Transformed static visuals into dynamic, story-driven digital assets that elevated brand recall and audience reach.</li>
+      </ul>
     </div>
-    <ul>
-      <li>Delivered creative solutions for <strong>4 brands</strong> (Nija Technologies, The Wedding Biryani, Coal BBQ, Qatar Power &amp; Safety), producing <strong>60+ graphics and motion videos</strong>.</li>
-      <li>Managed social media strategies and targeted campaigns, driving <strong>30% increase in brand awareness</strong> and <strong>25% growth in reach</strong>.</li>
-    </ul>
-  </div>
 
-  <div class="job">
-    <div class="job-header">
-      <h3>JJ MODERN DESIGNS &mdash; Creative Branding &amp; Digital Media</h3>
-      <div class="job-date">Jul 2020 &ndash; Sep 2021</div>
+    <h2><span class="accent-dot"></span> Key Projects</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <h3>CHOCOLATEX &mdash; Motion Graphics Designer &amp; Video Editor</h3>
+        <div class="job-date">Dec 2024 &ndash; Apr 2025</div>
+      </div>
+      <ul>
+        <li>Created <strong>20+ motion graphics and video assets</strong> for digital platforms, integrating AI tools to improve production efficiency by <strong>30%</strong>.</li>
+        <li>Achieved <strong>45% increase in digital engagement</strong> through visual effects, brand storytelling, and platform-optimized content delivery.</li>
+        <li>Directed end-to-end multimedia content creation aligned with brand identity and content strategy goals.</li>
+      </ul>
     </div>
-    <ul>
-      <li>Delivered <strong>80+ visual materials</strong> and managed social media content, resulting in <strong>40% follower growth</strong> and <strong>20% increase in e-commerce conversions</strong>.</li>
-      <li>Produced product photography and promotional videos, boosting overall brand visibility by <strong>35%</strong>.</li>
-    </ul>
-  </div>
 
-  <h2>Education</h2>
+    <div class="job">
+      <div class="job-header">
+        <h3>OUT BOX CREATIONS &mdash; Multi-Brand Creative Campaign</h3>
+        <div class="job-date">Apr &ndash; Dec 2024</div>
+      </div>
+      <ul>
+        <li>Delivered creative direction and digital campaign solutions for <strong>4 brands</strong> (Nija Technologies, The Wedding Biryani, Coal BBQ, Qatar Power &amp; Safety), producing <strong>60+ graphics and motion videos</strong>.</li>
+        <li>Managed social media content strategy and engagement workflows, driving <strong>30% increase in brand awareness</strong> and <strong>25% growth in reach</strong>.</li>
+        <li>Developed brand graphics, promotional materials, and targeted campaigns aligned with each brand's unique positioning.</li>
+      </ul>
+    </div>
 
-  <div class="edu-row">
-    <h3>Diploma in Visual Effects &mdash; Vels University</h3>
-    <div class="job-date">2022 &ndash; 2025</div>
-  </div>
-  <div class="edu-detail">Compositing, motion graphics, 3D techniques, post-production, and digital artistry.</div>
+    <div class="job">
+      <div class="job-header">
+        <h3>JJ MODERN DESIGNS &mdash; Creative Branding &amp; Digital Media</h3>
+        <div class="job-date">Jul 2020 &ndash; Sep 2021</div>
+      </div>
+      <ul>
+        <li>Led end-to-end design and digital branding, delivering <strong>80+ visual materials</strong> that resulted in <strong>40% follower growth</strong> and <strong>20% increase in e-commerce conversions</strong>.</li>
+        <li>Produced product photography and promotional videos for e-commerce platforms, boosting overall brand visibility by <strong>35%</strong>.</li>
+        <li>Contributed creative insights to digital marketing strategies and managed social media content for Instagram &amp; Facebook to strengthen online presence.</li>
+      </ul>
+    </div>
 
-  <div class="edu-row">
-    <h3>C Tech Graphic Design (Certificate) &mdash; Image Creative Education</h3>
-    <div class="job-date">2019 &ndash; 2021</div>
-  </div>
-  <div class="edu-detail">Visual communication, branding, and creative design.</div>
+    <h2><span class="accent-dot"></span> Education</h2>
 
-  <div class="edu-row">
-    <h3>SSC &mdash; National Star Matriculation Higher Secondary School</h3>
-    <div class="job-date">2018 &ndash; 2019</div>
+    <div class="edu-item">
+      <div class="edu-row">
+        <h3>Diploma in Visual Effects &mdash; Vels University</h3>
+        <div class="job-date">2022 &ndash; 2025</div>
+      </div>
+      <div class="edu-detail">Compositing, motion graphics, 3D techniques, post-production, and digital artistry.</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-row">
+        <h3>C Tech Graphic Design (Certificate) &mdash; Image Creative Education</h3>
+        <div class="job-date">2019 &ndash; 2021</div>
+      </div>
+      <div class="edu-detail">Visual communication, branding, and creative design.</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-row">
+        <h3>SSC &mdash; National Star Matriculation Higher Secondary School</h3>
+        <div class="job-date">2018 &ndash; 2019</div>
+      </div>
+    </div>
+
   </div>
 
 </body>

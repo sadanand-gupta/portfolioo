@@ -45,7 +45,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
       </ul>
 
       <div class="nav-actions">
-        <a href="https://drive.google.com/uc?export=download&id=1AMyR-ftFvz_qWLYodQ1YXM5O_yTnTh_l"
+        <a href="https://drive.google.com/uc?export=download&id=1yIPGCEwYinb3wJrWm_YlKXMVEbgIqgde"
           target="_blank" rel="noopener" class="nav-btn nav-btn-outline">
           <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
             <path d="M7 1v9M3 7l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

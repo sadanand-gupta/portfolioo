@@ -24,6 +24,15 @@ const threeD = [
   { name: 'Blender', level: 82 },
 ]
 
+const digitalAI = [
+  { name: 'AI-Powered Design', level: 90 },
+  { name: 'Content Strategy', level: 85 },
+  { name: 'Creative Direction', level: 88 },
+  { name: 'Campaign Design', level: 85 },
+  { name: 'Generative AI', level: 82 },
+  { name: 'Digital Advertising', level: 78 },
+]
+
 const categories = [
   {
     title: 'Graphic Design',
@@ -42,6 +51,12 @@ const categories = [
     icon: '03',
     tools: threeD,
     svgIcon: 'three',
+  },
+  {
+    title: 'Digital & AI',
+    icon: '04',
+    tools: digitalAI,
+    svgIcon: 'ai',
   },
 ]
 </script>
@@ -101,6 +116,17 @@ const categories = [
               <path d="M40 42 L40 70" stroke="currentColor" stroke-width="1" stroke-opacity="0.2"/>
               <circle cx="40" cy="42" r="3" fill="currentColor" fill-opacity="0.2"/>
             </svg>
+            <!-- AI icon -->
+            <svg v-if="cat.svgIcon === 'ai'" class="card-svg-icon" viewBox="0 0 80 80" fill="none">
+              <circle cx="40" cy="40" r="14" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.3"/>
+              <circle cx="40" cy="40" r="5" fill="currentColor" fill-opacity="0.2"/>
+              <path d="M40 14 L40 26 M40 54 L40 66 M14 40 L26 40 M54 40 L66 40" stroke="currentColor" stroke-width="1.5" stroke-opacity="0.25" stroke-linecap="round"/>
+              <path d="M21 21 L29 29 M51 51 L59 59 M59 21 L51 29 M29 51 L21 59" stroke="currentColor" stroke-width="1" stroke-opacity="0.15" stroke-linecap="round"/>
+              <circle cx="40" cy="14" r="3" fill="currentColor" fill-opacity="0.3"/>
+              <circle cx="40" cy="66" r="3" fill="currentColor" fill-opacity="0.3"/>
+              <circle cx="14" cy="40" r="3" fill="currentColor" fill-opacity="0.3"/>
+              <circle cx="66" cy="40" r="3" fill="currentColor" fill-opacity="0.3"/>
+            </svg>
           </div>
 
           <div class="card-header">
@@ -159,7 +185,7 @@ const categories = [
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
@@ -298,6 +324,12 @@ const categories = [
 .skill-card:hover .tool-bar-fill,
 .skill-card.revealed .tool-bar-fill {
   transform: scaleX(1);
+}
+
+@media (max-width: 1100px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {

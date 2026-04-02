@@ -9,7 +9,8 @@
       "Bash(npx --yes puppeteer --version)",
       "Bash(npm install puppeteer)",
       "Bash(node generate-resume.js)",
-      "Bash(node generate-resume.cjs)"
+      "Bash(node generate-resume.cjs)",
+      "Bash(npm run build)"
     ]
   }
 }
